@@ -59,8 +59,6 @@ $max_timestamp : Return media before this UNIX timestamp.
                 $user_media = array_merge($user_media , $arr);
                 $last_one = array_pop($arr);
                 $max_timestamp = $last_one['created_time'];
-                echo $max_timestamp.'<br >';
-                echo count($user_media).'<br>';
             } else {
                 $more_flag = false;
             }

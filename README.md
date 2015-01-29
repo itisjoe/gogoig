@@ -6,7 +6,7 @@ PHP Instagram API ver 0.1
 
 1. Go to [http://instagram.com/developer/](http://instagram.com/developer/) to get a client id.
 
-2. Include gogoig.php .
+2. Include **gogoig.php** .
 
 3. Code below:
 
@@ -46,6 +46,8 @@ $max_timestamp : Return media before this UNIX timestamp.
 
 ## Get someone's all public images 
 
+** You should run this one time to save all received datas, not use it everytime. **
+
         $ig = new gogoig(YOUR_CLIENT_ID);
         $user_media = array(); // here you are
         $more_flag = true;
@@ -63,3 +65,7 @@ $max_timestamp : Return media before this UNIX timestamp.
                 $more_flag = false;
             }
         } while($more_flag);
+        
+        print_r($user_media);
+
+
